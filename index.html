@@ -16,5 +16,7 @@ layout: default
   </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+  RewriteCond%{SERVER_PORT}^443$[OR]
+  RewriteCond%{HTTPS}=on
+  RewriteRule ^(.*)$http://zbyinsaat.com/$1 [R=301,L]
 </div>
